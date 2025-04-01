@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
             intent.putExtra(Intent.EXTRA_TEXT, text)
-            startActivity(intent)
+            startActivity(Intent.createChooser(intent, "Share with..."))
 
         }
     }
